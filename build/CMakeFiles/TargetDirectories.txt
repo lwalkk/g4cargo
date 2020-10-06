@@ -1,5 +1,0 @@
-C:/dev/G4Cargo/build/CMakeFiles/G4Cargo.dir
-C:/dev/G4Cargo/build/CMakeFiles/B1.dir
-C:/dev/G4Cargo/build/CMakeFiles/INSTALL.dir
-C:/dev/G4Cargo/build/CMakeFiles/ALL_BUILD.dir
-C:/dev/G4Cargo/build/CMakeFiles/ZERO_CHECK.dir
