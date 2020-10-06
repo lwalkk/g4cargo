@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F940F8D5-E718-34CA-9B0E-A189CBF968EE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>G4Cargo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\dev\G4Cargo\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G4Cargo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G4Cargo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\dev\G4Cargo\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G4Cargo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G4Cargo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\dev\G4Cargo\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G4Cargo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G4Cargo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\dev\G4Cargo\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G4Cargo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G4Cargo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Zm200</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\dev\Geant4\geant4_10_06-install\lib\G4Tree.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4GMocren.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4visHepRep.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4RayTracer.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4VRML.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4OpenGL.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4gl2ps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4interfaces.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4persistency.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4error_propagation.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4readout.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4physicslists.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4parmodels.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4FR.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4vis_management.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4run.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4event.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4tracking.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4processes.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4analysis.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4expat.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4zlib.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4digits_hits.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4track.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4particles.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4geometry.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4materials.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4graphics_reps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4intercoms.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4global.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4clhep.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/dev/G4Cargo/build/Debug/G4Cargo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/dev/G4Cargo/build/Debug/G4Cargo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Zm200</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\dev\Geant4\geant4_10_06-install\lib\G4Tree.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4GMocren.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4visHepRep.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4RayTracer.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4VRML.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4OpenGL.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4gl2ps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4interfaces.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4persistency.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4error_propagation.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4readout.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4physicslists.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4parmodels.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4FR.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4vis_management.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4run.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4event.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4tracking.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4processes.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4analysis.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4expat.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4zlib.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4digits_hits.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4track.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4particles.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4geometry.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4materials.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4graphics_reps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4intercoms.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4global.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4clhep.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/dev/G4Cargo/build/Release/G4Cargo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/dev/G4Cargo/build/Release/G4Cargo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Zm200</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\dev\Geant4\geant4_10_06-install\lib\G4Tree.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4GMocren.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4visHepRep.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4RayTracer.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4VRML.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4OpenGL.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4gl2ps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4interfaces.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4persistency.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4error_propagation.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4readout.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4physicslists.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4parmodels.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4FR.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4vis_management.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4run.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4event.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4tracking.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4processes.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4analysis.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4expat.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4zlib.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4digits_hits.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4track.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4particles.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4geometry.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4materials.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4graphics_reps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4intercoms.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4global.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4clhep.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/dev/G4Cargo/build/MinSizeRel/G4Cargo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/dev/G4Cargo/build/MinSizeRel/G4Cargo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Zm200</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CONSOLE;_WIN32;WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_WIN32;OS;XPNET;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;NDEBUG;G4INTY_USE_WIN32;G4UI_USE_WIN32;G4VIS_USE_OPENGLWIN32;G4VIS_USE_OPENGL;G4LIB_BUILD_DLL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\dev\G4Cargo\include;C:\dev\Geant4\geant4_10_06-install\include\Geant4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\dev\Geant4\geant4_10_06-install\lib\G4Tree.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4GMocren.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4visHepRep.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4RayTracer.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4VRML.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4OpenGL.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4gl2ps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4interfaces.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4persistency.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4error_propagation.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4readout.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4physicslists.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4parmodels.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4FR.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4vis_management.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4modeling.lib;glu32.lib;opengl32.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4run.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4event.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4tracking.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4processes.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4analysis.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4expat.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4zlib.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4digits_hits.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4track.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4particles.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4geometry.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4materials.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4graphics_reps.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4intercoms.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4global.lib;C:\dev\Geant4\geant4_10_06-install\lib\G4clhep.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/dev/G4Cargo/build/RelWithDebInfo/G4Cargo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/dev/G4Cargo/build/RelWithDebInfo/G4Cargo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\G4Cargo\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/dev/G4Cargo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/G4Cargo -BC:/dev/G4Cargo/build --check-stamp-file C:/dev/G4Cargo/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeSystem.cmake;C:\dev\G4Cargo\exampleB1.in;C:\dev\G4Cargo\exampleB1.out;C:\dev\G4Cargo\init_vis.mac;C:\dev\G4Cargo\run1.mac;C:\dev\G4Cargo\run2.mac;C:\dev\G4Cargo\vis.mac;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4Config.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4ConfigVersion.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends-relwithdebinfo.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4PackageCache.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\IntelCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\MSVCCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\UseGeant4.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\dev\G4Cargo\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/dev/G4Cargo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/G4Cargo -BC:/dev/G4Cargo/build --check-stamp-file C:/dev/G4Cargo/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeSystem.cmake;C:\dev\G4Cargo\exampleB1.in;C:\dev\G4Cargo\exampleB1.out;C:\dev\G4Cargo\init_vis.mac;C:\dev\G4Cargo\run1.mac;C:\dev\G4Cargo\run2.mac;C:\dev\G4Cargo\vis.mac;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4Config.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4ConfigVersion.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends-relwithdebinfo.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4PackageCache.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\IntelCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\MSVCCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\UseGeant4.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\dev\G4Cargo\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/dev/G4Cargo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/G4Cargo -BC:/dev/G4Cargo/build --check-stamp-file C:/dev/G4Cargo/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeSystem.cmake;C:\dev\G4Cargo\exampleB1.in;C:\dev\G4Cargo\exampleB1.out;C:\dev\G4Cargo\init_vis.mac;C:\dev\G4Cargo\run1.mac;C:\dev\G4Cargo\run2.mac;C:\dev\G4Cargo\vis.mac;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4Config.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4ConfigVersion.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends-relwithdebinfo.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4PackageCache.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\IntelCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\MSVCCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\UseGeant4.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\dev\G4Cargo\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/dev/G4Cargo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/G4Cargo -BC:/dev/G4Cargo/build --check-stamp-file C:/dev/G4Cargo/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeCXXCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeRCCompiler.cmake;C:\dev\G4Cargo\build\CMakeFiles\3.15.3\CMakeSystem.cmake;C:\dev\G4Cargo\exampleB1.in;C:\dev\G4Cargo\exampleB1.out;C:\dev\G4Cargo\init_vis.mac;C:\dev\G4Cargo\run1.mac;C:\dev\G4Cargo\run2.mac;C:\dev\G4Cargo\vis.mac;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4Config.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4ConfigVersion.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends-relwithdebinfo.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4LibraryDepends.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Geant4PackageCache.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\IntelCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\Modules\MSVCCompileFeatures.cmake;C:\dev\Geant4\geant4_10_06-install\lib\Geant4-10.6.2\UseGeant4.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\dev\G4Cargo\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\dev\G4Cargo\src\B1ActionInitialization.cc" />
+    <ClCompile Include="C:\dev\G4Cargo\src\B1DetectorConstruction.cc" />
+    <ClCompile Include="C:\dev\G4Cargo\src\B1EventAction.cc" />
+    <ClCompile Include="C:\dev\G4Cargo\src\B1PrimaryGeneratorAction.cc" />
+    <ClCompile Include="C:\dev\G4Cargo\src\B1RunAction.cc" />
+    <ClCompile Include="C:\dev\G4Cargo\src\B1SteppingAction.cc" />
+    <ClCompile Include="..\src\Application.cc" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1ActionInitialization.hh" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1DetectorConstruction.hh" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1EventAction.hh" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1PrimaryGeneratorAction.hh" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1RunAction.hh" />
+    <ClInclude Include="C:\dev\G4Cargo\include\B1SteppingAction.hh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\dev\G4Cargo\build\ZERO_CHECK.vcxproj">
+      <Project>{583CB663-BABD-33C5-A511-FA40F2830ABE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
