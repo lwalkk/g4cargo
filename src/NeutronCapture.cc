@@ -24,35 +24,54 @@
 // ********************************************************************
 //
 //
-/// \file B1SteppingAction.hh
-/// \brief Definition of the B1SteppingAction class
+//---------------------------------------------------------------------------
+//
+// ClassName:QBBC
+//
+// Author: 11 April 2006 V. Ivanchenko
+//
+// Modified:
+// 24.11.06 V.Ivanchenko: Add G4HadronHElasticPhysics and G4NeutronTrackingCut
+// 16.05.07 V.Ivanchenko: rename EM builders
+// 20.04.11 V.Ivanchenko: remove extra headers of elastic builders
+//                        added FTFP/Binary ion physics 
+// 16.10.12 A.Ribon: renamed the used physics classes
+//
+//----------------------------------------------------------------------------
+//
 
-#ifndef B1SteppingAction_h
-#define B1SteppingAction_h 1
-
-#include "G4UserSteppingAction.hh"
 #include "globals.hh"
+#include "G4PhysicalConstants.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4ParticleDefinition.hh"
+#include "NeutronCapture.hh"
 
-class B1EventAction;
+#include "G4DecayPhysics.hh"
+#include "G4EmStandardPhysics.hh"
+#include "G4EmStandardPhysics_option4.hh"
+#include "G4EmExtraPhysics.hh"
+#include "G4StoppingPhysics.hh"
 
-class G4LogicalVolume;
+#include "G4HadronInelasticQBBC.hh"
+#include "G4HadronElasticPhysics.hh"
+#include "G4HadronElasticPhysicsXS.hh"
+#include "G4HadronElasticPhysicsHP.hh"
+#include "G4ChargeExchangePhysics.hh"
+#include "G4IonPhysicsXS.hh"
+#include "G4IonElasticPhysics.hh"
+#include "G4NeutronTrackingCut.hh"
+#include "G4HadronCaptureProcess.hh"
 
-/// Stepping action class
- 
-class B1SteppingAction : public G4UserSteppingAction
+NeutronCapture::NeutronCapture(G4int ver, const G4String&)
 {
-  public:
-    B1SteppingAction(B1EventAction* eventAction);
-    virtual ~B1SteppingAction();
+	G4cout << "<<< Physics List for Neutron Capture" << G4endl;
 
-    // method from the base class
-    virtual void UserSteppingAction(const G4Step*);
+	// ??
+	defaultCutValue = 0.7 * mm;
+	SetVerboseLevel(ver);
 
-  private:
-    B1EventAction*  fEventAction;
-    G4LogicalVolume* fScoringVolume;
-};
+	
+	// Hadron Physics
+	RegisterPhysics(new G4HadronCaptureProcess(ver));
+}
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-#endif

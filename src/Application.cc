@@ -50,7 +50,6 @@ int main(int argc,char** argv)
 {
   // Detect interactive mode (if no arguments) and define UI session
 
-    int x = 2;
   G4UIExecutive* ui = 0;
   if ( argc == 1 ) {
     ui = new G4UIExecutive(argc, argv);
@@ -69,10 +68,10 @@ int main(int argc,char** argv)
 
   // Set mandatory initialization classes
   //
-  // Detector construction
+  // Detector construction - Done
   runManager->SetUserInitialization(new B1DetectorConstruction());
 
-  // Physics list
+  // Physics list - working on it
   G4VModularPhysicsList* physicsList = new QBBC;
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);
