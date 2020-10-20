@@ -25,9 +25,9 @@
 //
 //
 /// \file B1DetectorConstruction.cc
-/// \brief Implementation of the B1DetectorConstruction class
+/// \brief Implementation of the DetectorConstruction class
 
-#include "B1DetectorConstruction.hh"
+#include "DetectorConstruction.hh"
 
 #include "G4RunManager.hh"
 #include "G4NistManager.hh"
@@ -42,26 +42,26 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-B1DetectorConstruction::B1DetectorConstruction()
+DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(),
   fScoringVolume(0)
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-B1DetectorConstruction::~B1DetectorConstruction()
+DetectorConstruction::~DetectorConstruction()
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4VPhysicalVolume* B1DetectorConstruction::Construct()
+G4VPhysicalVolume* DetectorConstruction::Construct()
 {  
   // Get nist material manager
   G4NistManager* nist = G4NistManager::Instance();
   
-  // Envelope parameters (thing filled with water)
+  // Create Box of oxyxgen
   //
-  G4double env_sizeXY = 20*cm, env_sizeZ = 30*cm;
+  G4double env_sizeXY = 20*cm, env_sizeZ = 100*cm;
   G4Material* env_mat = nist->FindOrBuildMaterial("G4_O");
    
   // Option to switch on/off checking of volumes overlaps
@@ -116,10 +116,30 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
                     0,                       //copy number
                     checkOverlaps);          //overlaps checking
  
+  G4Box* solidWall =
+      new G4Box("Wall", //name
+          0.5 * env_sizeXY, 0.5 * env_sizeXY, 0.01 * env_sizeZ); // size
+  G4Material* wall_mat = nist->FindOrBuildMaterial("G4_CONCRETE");
+
+  G4LogicalVolume * logicWall =
+      new G4LogicalVolume(solidWall, wall_mat, "Wall");
+
+  G4ThreeVector wallPos = G4ThreeVector(0, 0, 51 * cm);
+  
+  new G4PVPlacement(0,                       //no rotation
+      wallPos,         //at (0,0,0)
+      logicWall,                //its logical volume
+      "Wall",              //its name
+      logicWorld,              //its mother  volume
+      false,                   //no boolean operation
+      0,                       //copy number
+      checkOverlaps);
+
+ 
 
                 
   // set envelope as scoring volume
-  fScoringVolume = logicEnv;
+  fScoringVolume = logicWall;
 
   //
   //always return the physical World

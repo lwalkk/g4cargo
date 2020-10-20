@@ -24,35 +24,41 @@
 // ********************************************************************
 //
 //
-/// \file B1DetectorConstruction.hh
-/// \brief Definition of the B1DetectorConstruction class
+/// \file EventAction.cc
+/// \brief Implementation of the EventAction class
 
-#ifndef B1DetectorConstruction_h
-#define B1DetectorConstruction_h 1
+#include "EventAction.hh"
+#include "RunAction.hh"
 
-#include "G4VUserDetectorConstruction.hh"
-#include "globals.hh"
-
-class G4VPhysicalVolume;
-class G4LogicalVolume;
-
-/// Detector construction class to define materials and geometry.
-
-class B1DetectorConstruction : public G4VUserDetectorConstruction
-{
-  public:
-    B1DetectorConstruction();
-    virtual ~B1DetectorConstruction();
-
-    virtual G4VPhysicalVolume* Construct();
-    
-    G4LogicalVolume* GetScoringVolume() const { return fScoringVolume; }
-
-  protected:
-    G4LogicalVolume*  fScoringVolume;
-};
+#include "G4Event.hh"
+#include "G4RunManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#endif
+EventAction::EventAction(RunAction* runAction)
+: G4UserEventAction(),
+  fRunAction(runAction),
+  fEdep(0.)
+{} 
 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+EventAction::~EventAction()
+{}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::BeginOfEventAction(const G4Event*)
+{    
+  fEdep = 0.;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::EndOfEventAction(const G4Event*)
+{   
+  // accumulate statistics in run action
+  fRunAction->AddEdep(fEdep);
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -24,11 +24,11 @@
 // ********************************************************************
 //
 //
-/// \file exampleB1.cc
-/// \brief Main program of the B1 example
+/// \file example.cc
+/// \brief Main program of the  example
 
-#include "B1DetectorConstruction.hh"
-#include "B1ActionInitialization.hh"
+#include "DetectorConstruction.hh"
+#include "ActionInitialization.hh"
 
 #ifdef G4MULTITHREADED
 #include "G4MTRunManager.hh"
@@ -69,17 +69,17 @@ int main(int argc,char** argv)
   // Set mandatory initialization classes
   //
   // Detector construction - Done
-  runManager->SetUserInitialization(new B1DetectorConstruction());
+  runManager->SetUserInitialization(new DetectorConstruction());
 
-  // Physics list - working on it
+  // Physics list - working on it -- done?
   G4VModularPhysicsList* physicsList = new QBBC;
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);
     
-  // User action initialization
-  runManager->SetUserInitialization(new B1ActionInitialization());
+  // User action initialization - next
+  runManager->SetUserInitialization(new ActionInitialization());
   
-  // Initialize visualization
+  // Initialize visualization - dont' need to change this
   //
   G4VisManager* visManager = new G4VisExecutive;
   // G4VisExecutive can take a verbosity argument - see /vis/verbose guidance.

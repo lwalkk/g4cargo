@@ -24,41 +24,35 @@
 // ********************************************************************
 //
 //
-/// \file B1EventAction.cc
-/// \brief Implementation of the B1EventAction class
+/// \file B1SteppingAction.hh
+/// \brief Definition of the B1SteppingAction class
 
-#include "B1EventAction.hh"
-#include "B1RunAction.hh"
+#ifndef SteppingAction_h
+#define SteppingAction_h 1
 
-#include "G4Event.hh"
-#include "G4RunManager.hh"
+#include "G4UserSteppingAction.hh"
+#include "globals.hh"
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+class EventAction;
 
-B1EventAction::B1EventAction(B1RunAction* runAction)
-: G4UserEventAction(),
-  fRunAction(runAction),
-  fEdep(0.)
-{} 
+class G4LogicalVolume;
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// Stepping action class
+ 
+class SteppingAction : public G4UserSteppingAction
+{
+  public:
+    SteppingAction(EventAction* eventAction);
+    virtual ~SteppingAction();
 
-B1EventAction::~B1EventAction()
-{}
+    // method from the base class
+    virtual void UserSteppingAction(const G4Step*);
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void B1EventAction::BeginOfEventAction(const G4Event*)
-{    
-  fEdep = 0.;
-}
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void B1EventAction::EndOfEventAction(const G4Event*)
-{   
-  // accumulate statistics in run action
-  fRunAction->AddEdep(fEdep);
-}
+  private:
+    EventAction*  fEventAction;
+    G4LogicalVolume* fScoringVolume;
+};
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#endif
