@@ -60,7 +60,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     fScoringVolume = detectorConstruction->GetScoringVolume();   
   }
 
-  // get volume of the current step
+  // get volume of the current step - no this will increment each step
   G4LogicalVolume* volume 
     = step->GetPreStepPoint()->GetTouchableHandle()
       ->GetVolume()->GetLogicalVolume();
@@ -69,8 +69,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   if (volume != fScoringVolume) return;
 
   // collect energy deposited in this step
-  G4double edepStep = step->GetTotalEnergyDeposit();
-  fEventAction->AddEdep(edepStep);  
+  fEventAction->Increment();  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
